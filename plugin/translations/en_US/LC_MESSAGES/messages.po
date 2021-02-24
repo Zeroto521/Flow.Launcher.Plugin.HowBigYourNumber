@@ -1,0 +1,47 @@
+# English (United States) translations for .
+# Copyright (C) 2021 Zero (PERSON)
+# This file is distributed under the same license as the  project.
+# Zero <zeroto521@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0.0\n"
+"Report-Msgid-Bugs-To: zeroto521@gmail.com\n"
+"POT-Creation-Date: 2021-02-24 16:54+0800\n"
+"PO-Revision-Date: 2021-02-24 16:45+0800\n"
+"Last-Translator: Zeroto521 <Zeroto521@gmail>\n"
+"Language: en_US\n"
+"Language-Team: en_US <zeroto521@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: plugin/ui.py:23
+msgid "WARNING: No Unit"
+msgstr "WARNING: No Unit"
+
+#: plugin/ui.py:24
+msgid "Please open the config file path and edit it."
+msgstr "Please open the config file path and edit it."
+
+#: plugin/ui.py:35
+msgid "Click & Copy to Clipboard"
+msgstr "Click & Copy to Clipboard"
+
+#: plugin/ui.py:41
+msgid "WARNING: What you input is not Numeric."
+msgstr "WARNING: What you input is not Numeric."
+
+#: plugin/ui.py:42
+msgid "Please check the inputting."
+msgstr "Please check the inputting."
+
+#: plugin/ui.py:46
+msgid "How Big Your Number"
+msgstr "How Big Your Number"
+
+#: plugin/ui.py:47
+msgid "Give a unit to the number."
+msgstr "Give a unit to the number."

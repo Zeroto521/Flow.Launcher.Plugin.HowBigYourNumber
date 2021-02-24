@@ -1,0 +1,12 @@
+{
+    "ID": "8a8926fa90fe426bbee4fbb4b9e07da8",
+    "ActionKeyword": "num",
+    "Name": "HowBigYourNumber",
+    "Description": "Give a unit to the number.",
+    "Author": "Zero <Zeroto521>",
+    "Version": "1.0.0",
+    "Language": "python",
+    "Website": "https://github.com/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber",
+    "IcoPath": "assets/favicon.ico",
+    "ExecuteFileName": "main.py"
+}
