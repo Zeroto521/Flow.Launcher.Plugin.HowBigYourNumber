@@ -8,6 +8,13 @@ Give a unit to the number.
 
 ![result](assets/example_result.png)
 
+## :wrench: Configuration
+
+- `local`: language.
+- `units`: the unit of number.
+
+More configuration options, please see [config](.env).
+
 ## :pushpin: Requirements
 
 - Python3.6(+)
