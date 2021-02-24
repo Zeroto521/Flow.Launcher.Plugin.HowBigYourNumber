@@ -34,7 +34,7 @@ __long_description__ = open(readme_path, "r").read()
 
 # other information
 PLUGIN_ID = "8a8926fa90fe426bbee4fbb4b9e07da8"
-ICON_PATH = "assets/favicon.ico"
+ICON_PATH = "assets/favicon.png"
 PLUGIN_ACTION_KEYWORD = "num"
 PLUGIN_AUTHOR = "Zero <Zeroto521>"
 PLUGIN_PROGRAM_LANG = "python"

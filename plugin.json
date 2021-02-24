@@ -7,6 +7,6 @@
     "Version": "1.0.0",
     "Language": "python",
     "Website": "https://github.com/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber",
-    "IcoPath": "assets/favicon.ico",
+    "IcoPath": "assets/favicon.png",
     "ExecuteFileName": "main.py"
 }

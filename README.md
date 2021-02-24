@@ -4,6 +4,10 @@ Give a unit to the number.
 
 [![Build Status](https://travis-ci.com/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber.svg?branch=master)](https://travis-ci.com/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber) [![codecov](https://codecov.io/gh/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber/branch/master/graph/badge.svg)](https://codecov.io/gh/Zeroto521/Flow.Launcher.Plugin.HowBigYourNumber)
 
+![homepage](assets/example_homepage.png)
+
+![result](assets/example_result.png)
+
 ## :pushpin: Requirements
 
 - Python3.6(+)
