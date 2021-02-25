@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
 from copy import deepcopy
-from os import startfile
 from typing import List
 
 from flowlauncher import FlowLauncher, FlowLauncherAPI
@@ -76,5 +76,5 @@ class Main(FlowLauncher):
         copy2clipboard(value)
 
     def openFolder(self, path: str):
-        startfile(path)
+        os.startfile(path)
         FlowLauncherAPI.change_query(path)
