@@ -16,9 +16,9 @@ class Main(FlowLauncher):
     messages_queue = []
 
     def query(self, param: str) -> List[dict]:
-        q = param.strip().split(".")[0]
-
         if param:
+            q = param.strip().split(".")[0]
+
             if len(str(q)) > len(UNITS):
                 self.sendActionMess(
                     _l("WARNING: No Unit"),
