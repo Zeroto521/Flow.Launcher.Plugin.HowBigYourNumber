@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
-import os
 from copy import deepcopy
+from os import startfile
 from typing import List
 
 from flowlauncher import FlowLauncher, FlowLauncherAPI
 from pyperclip import copy as copy2clipboard
 
 from plugin.extensions import _l
-from plugin.settings import UNITS, dotenv_path
+from plugin.settings import SIGNS, UNITS, dotenv_path
 from plugin.templates import *
 
 
@@ -28,14 +28,15 @@ class Main(FlowLauncher):
                 )
                 return self.messages_queue
 
-            if q.isdigit():
-                res = f"{q[0]}{UNITS[len(q)-1]}"
+            if q.isdigit() or (q[0] in SIGNS and q[1:].isdigit()):
+                base, length = f"{int(q):.{len(q)-1}e}".split('e')
+                number_with_unit = f"{base} {UNITS[int(length)]}"
 
                 self.sendActionMess(
-                    res,
+                    number_with_unit,
                     _l("Click & Copy to Clipboard"),
                     "copy2clipboard",
-                    [res]
+                    [number_with_unit]
                 )
             else:
                 self.sendNormalMess(
@@ -75,5 +76,5 @@ class Main(FlowLauncher):
         copy2clipboard(value)
 
     def openFolder(self, path: str):
-        os.startfile(path)
+        startfile(path)
         FlowLauncherAPI.change_query(path)

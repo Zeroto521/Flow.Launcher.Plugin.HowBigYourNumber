@@ -20,6 +20,8 @@ LOCAL = os.getenv("local", "en")
 UNITS = os.getenv("units", [])
 UNITS = ast.literal_eval(UNITS)
 
+SIGNS = set(('-', '+'))
+
 # the information of package
 __package_name__ = "HowBigYourNumber"
 __version__ = "1.0.0"
