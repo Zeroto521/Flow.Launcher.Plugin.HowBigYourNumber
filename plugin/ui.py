@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import copy
 import os
+from copy import deepcopy
 from typing import List
 
-import pyperclip
 from flowlauncher import FlowLauncher, FlowLauncherAPI
+from pyperclip import copy as copy2clipboard
 
 from plugin.extensions import _l
 from plugin.settings import UNITS, dotenv_path
@@ -17,7 +17,8 @@ class Main(FlowLauncher):
 
     def query(self, param: str) -> List[dict]:
         q = param.strip().split(".")[0]
-        if q:
+
+        if param:
             if len(str(q)) > len(UNITS):
                 self.sendActionMess(
                     _l("WARNING: No Unit"),
@@ -41,7 +42,7 @@ class Main(FlowLauncher):
                     _l("WARNING: What you input is not Numeric."),
                     _l("Please check the inputting.")
                 )
-        else:
+        else:  # homepage, welcome words and introduction
             self.sendNormalMess(
                 _l("How Big Your Number"),
                 _l("Give a unit to the number.")
@@ -50,7 +51,7 @@ class Main(FlowLauncher):
         return self.messages_queue
 
     def sendNormalMess(self, title: str, subtitle: str):
-        message = copy.deepcopy(RESULT_TEMPLATE)
+        message = deepcopy(RESULT_TEMPLATE)
         message["Title"] = title
         message["SubTitle"] = subtitle
 
@@ -58,20 +59,20 @@ class Main(FlowLauncher):
 
     def sendActionMess(self, title: str, subtitle: str, method: str, value: list):
         # information
-        message = copy.deepcopy(RESULT_TEMPLATE)
+        message = deepcopy(RESULT_TEMPLATE)
         message["Title"] = title
         message["SubTitle"] = subtitle
 
         # action
-        action = copy.deepcopy(ACTION_TEMPLATE)
+        action = deepcopy(ACTION_TEMPLATE)
         action["JsonRPCAction"]["method"] = method
         action["JsonRPCAction"]["parameters"] = value
         message.update(action)
 
         self.messages_queue.append(message)
 
-    def copy2clipboard(self, value):
-        pyperclip.copy(str(value).strip())
+    def copy2clipboard(self, value: str):
+        copy2clipboard(value)
 
     def openFolder(self, path: str):
         os.startfile(path)
