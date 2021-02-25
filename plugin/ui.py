@@ -29,8 +29,9 @@ class Main(FlowLauncher):
                 return self.messages_queue
 
             if q.isdigit() or (q[0] in SIGNS and q[1:].isdigit()):
-                base, length = f"{int(q):.{len(q)-1}e}".split('e')
-                number_with_unit = f"{base} {UNITS[int(length)]}"
+                number_width = len(str(abs(int(q))))
+                base, index = f"{q:.{number_width-1}e}".split('e')
+                number_with_unit = f"{base} {UNITS[int(index)]}"
 
                 self.sendActionMess(
                     number_with_unit,
