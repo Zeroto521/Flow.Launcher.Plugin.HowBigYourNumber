@@ -20,6 +20,7 @@ LOCAL = os.getenv("local", "en")
 UNITS = os.getenv("units", [])
 UNITS = ast.literal_eval(UNITS)
 
+PRECISION = int(os.getenv("precision", 2))
 SIGNS = set(('-', '+'))
 
 # the information of package

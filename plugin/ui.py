@@ -8,7 +8,7 @@ from flowlauncher import FlowLauncher, FlowLauncherAPI
 from pyperclip import copy as copy2clipboard
 
 from plugin.extensions import _l
-from plugin.settings import SIGNS, UNITS, dotenv_path
+from plugin.settings import PRECISION, SIGNS, UNITS, dotenv_path
 from plugin.templates import *
 
 
@@ -29,8 +29,7 @@ class Main(FlowLauncher):
                 return self.messages_queue
 
             if q.isdigit() or (q[0] in SIGNS and q[1:].isdigit()):
-                number_width = len(str(abs(int(q))))
-                base, index = f"{int(q):.{number_width-1}e}".split('e')
+                base, index = f"{int(q):.{PRECISION}e}".split('e')
                 number_with_unit = f"{base} {UNITS[int(index)]}"
 
                 self.sendActionMess(

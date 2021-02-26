@@ -8,8 +8,9 @@ Give a unit to the number.
 
 ## :wrench: Configuration
 
-- `local`: language.
-- `units`: the unit of number.
+- `local`: `str`, language.
+- `units`: `list`, the unit of number.
+- `precision`: `int`.
 
 More configuration options, please see [config](.env).
 
