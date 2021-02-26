@@ -30,7 +30,7 @@ class Main(FlowLauncher):
 
             if q.isdigit() or (q[0] in SIGNS and q[1:].isdigit()):
                 number_width = len(str(abs(int(q))))
-                base, index = f"{q:.{number_width-1}e}".split('e')
+                base, index = f"{int(q):.{number_width-1}e}".split('e')
                 number_with_unit = f"{base} {UNITS[int(index)]}"
 
                 self.sendActionMess(
